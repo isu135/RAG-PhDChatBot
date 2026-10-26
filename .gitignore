@@ -1,0 +1,7 @@
+.env
+.venv/
+venv/
+Data/
+storage/
+__pycache__/
+Challenges/

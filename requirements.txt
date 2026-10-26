@@ -1,0 +1,6 @@
+llama-index
+llama-index-llms-azure-openai
+llama-index-embeddings-azure-openai
+python-dotenv
+pypdf
+llama-index-readers-file
