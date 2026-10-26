@@ -4,3 +4,4 @@ llama-index-embeddings-azure-openai
 python-dotenv
 pypdf
 llama-index-readers-file
+streamlit
