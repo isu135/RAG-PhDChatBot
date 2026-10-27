@@ -23,9 +23,20 @@ Rules:
 
 # ---------- Page setup ----------
 st.set_page_config(page_title="Ask my PhD research", page_icon="📄")
-st.title("📄 Ask my PhD research")
-st.caption("Ask questions about my research papers. Answers come only from the papers, "
-           "with page citations.")
+st.title("📄 Ask my research")
+st.caption("Ask questions about my published papers across my BSc, MSc and PhD. "
+           "Answers come only from these papers, with page citations. "
+           "PhD papers currently under review are not yet included.")
+st.subheader("Papers included")
+st.markdown("""
+- **PhD:** Image-based classification of robotic mastication (J. Food Engineering)
+- **PhD:** ChewNet multimodal food-bolus dataset (Data in Brief)
+- **PhD:** A novel approach for robotic bolus formation using GLCM image analysis
+- **PhD:** Moisture estimation of boluses by image processing
+- **PhD:** Real-time deep learning framework for chewing-cycle estimation 
+- **MSc:** Automatic colourisation of greyscale images using deep learning
+- **BSc:** Modelling and Optimisation of Vision-Guided Pick-and-Place Tasks Using Parallel Manipulators
+""")
 
 # ---------- Load models and index (only once, then cached) ----------
 @st.cache_resource(show_spinner="Loading papers...")
