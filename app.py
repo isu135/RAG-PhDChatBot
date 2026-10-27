@@ -23,7 +23,7 @@ Rules:
 
 # ---------- Page setup ----------
 st.set_page_config(page_title="Ask my PhD research", page_icon="📄")
-st.title("📄 Ask my research")
+st.title("📄 Ask about my research")
 st.caption("Ask questions about my published papers across my BSc, MSc and PhD. "
            "Answers come only from these papers, with page citations. "
            "PhD papers currently under review are not yet included.")
@@ -71,7 +71,7 @@ if "engine" not in st.session_state:
 
 with st.sidebar:
     st.subheader("About")
-    st.write("A RAG chatbot built with LlamaIndex and Azure OpenAI.")
+    st.write("Hi there! This is a RAG chatbot built with LlamaIndex and Azure OpenAI - Isurie Akarawita.")
     st.write(f"Questions used: {st.session_state.count} / {MAX_QUESTIONS}")
     if st.button("Start a new conversation"):
         st.session_state.engine.reset()
