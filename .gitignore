@@ -4,3 +4,4 @@ venv/
 Data/
 __pycache__/
 Challenges/
+.streamlit/secrets.toml

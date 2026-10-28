@@ -5,3 +5,5 @@ python-dotenv
 pypdf
 llama-index-readers-file
 streamlit
+gspread
+tzdata

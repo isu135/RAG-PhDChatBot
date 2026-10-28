@@ -7,6 +7,10 @@ from llama_index.core.node_parser import SentenceSplitter
 from llama_index.readers.file import PDFReader
 from llama_index.llms.azure_openai import AzureOpenAI
 from llama_index.embeddings.azure_openai import AzureOpenAIEmbedding
+import uuid
+import gspread
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 load_dotenv(override=True)
 
@@ -62,10 +66,33 @@ def get_index():
 
 index = get_index()
 
+# ---------- Question log (Google Sheet) ----------
+@st.cache_resource
+def get_log_sheet():
+    try:
+        gc = gspread.service_account_from_dict(dict(st.secrets["gcp_service_account"]))
+        return gc.open_by_key(st.secrets["SHEET_ID"]).sheet1
+    except Exception:
+        return None   # logging is simply off if secrets are missing (e.g. locally)
+
+def log_question(question, answer, sources):
+    sheet = get_log_sheet()
+    if sheet is None:
+        return
+    try:
+        now = datetime.now(ZoneInfo("Pacific/Auckland")).strftime("%Y-%m-%d %H:%M:%S")
+        sheet.append_row(
+            [now, st.session_state.session_id, question, answer[:2000], "; ".join(sources)],
+            value_input_option="RAW",
+        )
+    except Exception:
+        pass          # never let a logging problem break the chatbot
+
 # ---------- Each visitor gets their own conversation ----------
 if "engine" not in st.session_state:
     st.session_state.engine = index.as_chat_engine(
         chat_mode="condense_plus_context", similarity_top_k=8, system_prompt=SYSTEM_PROMPT)
+    st.session_state.session_id = uuid.uuid4().hex[:8]
     st.session_state.messages = []
     st.session_state.count = 0
 
@@ -111,3 +138,4 @@ if question := st.chat_input("Ask about my research..."):
                 st.markdown("\n".join(sources))
 
         st.session_state.messages.append({"role": "assistant", "content": answer})
+        log_question(question, answer, sources)
