@@ -1,0 +1,177 @@
+[
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 3,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p3_1.png",
+    "caption": "FIGURE 1. (a) Chewing robot. (b) Beef and plant based patties before chewing. (c) Trajectory 13 marked in blue dash line. (d) Food patty placed inside the artiﬁcial cavity.",
+    "description": "The figure is a set of four photos labeled (a) through (d). Photo (a) shows an older version of ChewBot prior to vision system integration, with labeled parts \"Upper molar\" and \"Oral cavity.\" Photo (b) displays beef and plant-based patties before chewing, with labels identifying \"Beef patties\" and \"plant patties.\" Photo (c) depicts the chewing robot's upper and lower molars with a blue dashed line marking \"Trajectory 13.\" Photo (d) shows a food patty placed inside an artificial cavity. There are no axis titles or plots, and no trends are visible as it is a photographic figure."
+  },
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 5,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p5_1.png",
+    "caption": "FIGURE 5. Plots illustrating the effect of pixel distance on (a) energy and (b) homogeneity difference between 7th chew cycle and 30th chew cycle of beef patties (BT1N7 and BT1N30).",
+    "description": "The figure consists of two line plots labeled (a) and (b). Plot (a) shows the \"Magnitude of Energy Difference\" on the y-axis versus the \"Distance Between the 2 Pixels\" on the x-axis, while plot (b) shows the \"Magnitude of Homogeneity Difference\" on the y-axis versus the same x-axis. Both plots include four lines representing different angles (0, 45, 90, and 135 degrees) as indicated by the legend. A visible trend in both plots is that the magnitude of difference decreases as the pixel distance increases."
+  },
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 6,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p6_1.png",
+    "caption": "FIGURE 7. Plots illustrating the effect of pixel distance on (a) energy and (b) homogeneity difference between 7th chew cycle and 30th chew cycle of beef patties (BT13N7 and BT13N30).",
+    "description": "The figure consists of two line plots labeled (a) and (b). Plot (a) shows the \"Magnitude of Energy Difference\" on the y-axis versus the \"Distance Between the 2 Pixels\" on the x-axis, while plot (b) shows the \"Magnitude of Homogeneity Difference\" on the y-axis versus the same x-axis. Both plots include four lines representing different angles (0, 45, 90, and 135 degrees) with corresponding color-coded legends. A visible trend in both plots is that the magnitude of differences decreases as the pixel distance increases."
+  },
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 7,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p7_1.png",
+    "caption": "FIGURE 9. Plots illustrating the effect of pixel distance on (a) energy and (b) homogeneity difference between 7th chew cycle and 30th chew cycle of plant patties (PT13N7 and PT13N30).",
+    "description": "The figure consists of two line plots labeled (a) and (b). Plot (a) shows the \"Magnitude of Energy Difference\" on the y-axis versus the \"Distance Between the 2 Pixels\" on the x-axis, while plot (b) shows the \"Magnitude of Homogeneity Difference\" on the y-axis against the same x-axis. Both plots include four lines representing different angles (0, 45, 90, and 135 degrees) with corresponding color-coded markers. A visible trend in both plots is that the magnitude of differences decreases as the pixel distance increases."
+  },
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 7,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p7_2.png",
+    "caption": "FIGURE 10. GLCM Energy of the in vitro food bolus with the number of chewing cycles.",
+    "description": "The figure is a plot showing the GLCM Energy of the in vitro food bolus as a function of the number of chewing cycles. The x-axis is labeled \"Chewing Cycles\" with points at N7, N15, and N30, and the y-axis is labeled \"GLCM Energy.\" The plot includes four data series labeled BT1, BT13, PT1, and PT13, each represented by different colored and styled lines. A visible trend is that GLCM Energy generally increases with the number of chewing cycles for all series."
+  },
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 7,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p7_3.png",
+    "caption": "FIGURE 9. Plots illustrating the effect of pixel distance on (a) energy and (b) homogeneity difference between 7th chew cycle and 30th chew cycle of plant patties (PT13N7 and PT13N30).",
+    "description": "The figure consists of two line plots labeled (a) and (b), illustrating the effect of pixel distance on energy and homogeneity differences, respectively, between PT13N7 and PT13N30. The x-axis of both plots is titled \"Distance Between the 2 Pixels,\" ranging from 1 to 10, while the y-axis of plot (a) is \"Magnitude of Energy Difference\" and for plot (b) is \"Magnitude of Homogeneity Difference.\" Each plot includes four lines representing different angles (0, 45, 90, and 135 degrees), showing how the magnitude of differences changes with increasing pixel distance."
+  },
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 8,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p8_1.png",
+    "caption": "FIGURE 13. Comparison of average number of chewed bolus pieces with the number of chewing cycles.",
+    "description": "The figure is a line plot comparing the average number of chewed bolus pieces with the number of chewing cycles. The x-axis is labeled \"Chewing Cycles\" with points N7, N15, and N30, and the y-axis is labeled \"Average Number of Bolus Pieces\" ranging from 0 to 40. Four lines are plotted, representing BT1, BT13, PT1, and PT13, with distinct colors and markers. The plot shows varying trends for each line across the chewing cycles."
+  },
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 8,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p8_2.png",
+    "caption": "FIGURE 12. GLCM Dissimilarity of the in vitro food bolus with the number of chewing cycles.",
+    "description": "The figure is a line plot showing the GLCM Dissimilarity of the in vitro food bolus as a function of the number of chewing cycles. The x-axis is labeled \"Chewing Cycles\" with points at N7, N15, and N30, and the y-axis is labeled \"GLCM Dissimilarity\" with values ranging approximately from 1.0 to 2.2. Four lines are plotted, representing BT1, BT13, PT1, and PT13, with solid and dashed lines differentiating the groups. The general trend shows a decrease in GLCM Dissimilarity with increasing chewing cycles for all groups."
+  },
+  {
+    "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
+    "page": 8,
+    "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p8_3.png",
+    "caption": "FIGURE 11. GLCM Homogeneity of the in vitro food bolus with the number of chewing cycles.",
+    "description": "The figure is a line plot showing the GLCM Homogeneity of the in vitro food bolus as a function of the number of chewing cycles. The x-axis is labeled \"Chewing Cycles\" with points at N7, N15, and N30, and the y-axis is labeled \"GLCM Homogeneity\" with values ranging approximately from 0.45 to 0.65. Four lines are plotted, representing BT1, BT13, PT1, and PT13, with solid and dashed lines distinguishing the groups. The plot shows an increasing trend in GLCM Homogeneity with the number of chewing cycles for all groups."
+  },
+  {
+    "file_name": "Automatic_Colorization_of_Greyscale_Images_Using_Deep_Learning_Fusion_Technique_and_Accuracy_Level_Analysis (1).pdf",
+    "page": 5,
+    "image_path": "figures/Automatic_Colorization_of_Greyscale_Imag_p5_1.png",
+    "caption": "",
+    "description": "The figure is a diagram illustrating an improved algorithm, specifically a neural network architecture. It shows three main parts labeled as Encoder Network, Higher Feature Extraction, and Decoder Network, with numbered blocks representing different layers or components. The diagram visually separates these sections with different colors and shapes, indicating the flow from input through feature extraction to output. There are no axis titles or plotted data, as it is a schematic representation rather than a graph or table."
+  },
+  {
+    "file_name": "ChewNet A multimodal dataset.pdf",
+    "page": 3,
+    "image_path": "figures/ChewNet_A_multimodal_dataset_p3_1.png",
+    "caption": "Fig. 1. ChewBot: the chewing robot.",
+    "description": "The figure is a photo showing the older version of the \"ChewBot: the chewing robot.\" The image depicts the robot's structure, including various mechanical components such as gears, a wheel, wires, and a syringe-like part. There are no axis titles, key labels, or plotted data visible in the figure. The caption identifies the device but does not provide additional details or trends."
+  },
+  {
+    "file_name": "ChewNet A multimodal dataset.pdf",
+    "page": 4,
+    "image_path": "figures/ChewNet_A_multimodal_dataset_p4_1.png",
+    "caption": "Fig. 2. Comparing beef and plant-based burger Pattie samples (a) Beef sample before chewing (b) Plant sample before chewing (c) Beef sample after 24 chewing cycles and (d) Plant sample after 24 chewing cycles.",
+    "description": "The figure is a set of four photos showing burger pattie samples. The images depict (a) a beef sample before chewing, (b) a plant-based sample before chewing, (c) the beef sample after 24 chewing cycles, and (d) the plant-based sample after 24 chewing cycles. There are no axis titles or key labels visible, and the photos visually compare the physical state of the samples before and after chewing."
+  },
+  {
+    "file_name": "ChewNet A multimodal dataset.pdf",
+    "page": 6,
+    "image_path": "figures/ChewNet_A_multimodal_dataset_p6_1.png",
+    "caption": "Fig. 3. File structures of invivo and invitro dataset.",
+    "description": "The figure is a diagram illustrating the file structures of the invivo and invitro datasets. It shows hierarchical folder organization, with the invivo dataset divided into Beef and Plant categories, each containing folders for Camera Pictures, Scanned Images, and TPA. The invitro dataset is further subdivided into Beef and Plant, each with T1 and T13 subfolders, which contain folders for Images, TPA, and Force, further organized by the number of chews (e.g., 05chews, 10chews, etc.). There are no axis titles or plotted data, as this is a structural diagram."
+  },
+  {
+    "file_name": "ChewNet A multimodal dataset.pdf",
+    "page": 7,
+    "image_path": "figures/ChewNet_A_multimodal_dataset_p7_1.png",
+    "caption": "Fig. 4. BIS, A beef bolus captured from phone (left image) and captured from the scanner (right image).",
+    "description": "The figure consists of two photos side by side, showing a beef bolus sample. The left image is a photo of the beef bolus captured using a phone, while the right image shows the same beef bolus captured using a scanner. There are no axis titles or labels, and the images visually compare the appearance of the beef bolus from the two different capture methods."
+  },
+  {
+    "file_name": "ChewNet A multimodal dataset.pdf",
+    "page": 10,
+    "image_path": "figures/ChewNet_A_multimodal_dataset_p10_1.png",
+    "caption": "Fig. 7. Chewing force directions.",
+    "description": "The figure is composed of two parts: a photo on the left and a diagram on the right. The photo shows an experimental setup with labeled \"Upper molar\" and \"Lower molar\" teeth positioned between mechanical components. The diagram on the right illustrates a 3D coordinate system with labeled axes indicating positive and negative directions for X, Y, and Z. The caption states the figure represents \"Chewing force directions.\""
+  },
+  {
+    "file_name": "ChewNet A multimodal dataset.pdf",
+    "page": 11,
+    "image_path": "figures/ChewNet_A_multimodal_dataset_p11_1.png",
+    "caption": "Fig. 8. Plant-based and beef burger Patties.",
+    "description": "The figure is a photo showing two types of burger patties. On the left is a package of plant-based burger patties labeled \"Impossible Burger Patties Made From Plants,\" and on the right is a package of beef burger patties labeled \"97% Beef Burgers with Brisket.\" There are no axis titles or plotted data, as this is a photographic comparison of the two products."
+  },
+  {
+    "file_name": "ChewNet A multimodal dataset.pdf",
+    "page": 11,
+    "image_path": "figures/ChewNet_A_multimodal_dataset_p11_2.png",
+    "caption": "Fig. 9. Cooked plant-based burger patties and samples cut into 2 g",
+    "description": "The figure consists of two photos side by side. The left photo shows two cooked plant-based burger patties on a baking tray with a fork inserted into one patty, and a cooking thermometer in the background. The right photo shows the same or similar cooked patties cut into small 2-gram samples arranged on a piece of parchment paper inside a glass container. There are no axis titles or labels visible in the images."
+  },
+  {
+    "file_name": "ChewNet A multimodal dataset.pdf",
+    "page": 12,
+    "image_path": "figures/ChewNet_A_multimodal_dataset_p12_1.png",
+    "caption": "Fig. 10. Camera setup.",
+    "description": "The figure is a photo showing the vision system of the ChewBot. It depicts a camera positioned to capture images of a model or object labeled as \"4 Upper Molars\" and \"Oral Cavity.\" The setup includes lighting arranged around the camera to illuminate the subject. The caption identifies the figure as \"Fig. 10. Camera setup.\""
+  },
+  {
+    "file_name": "Image-based classification of bolus phases.pdf",
+    "page": 3,
+    "image_path": "figures/Image_based_classification_of_bolus_phas_p3_1.png",
+    "caption": "Fig. 1. In-vitro chewing setup. The latest ChewBot.",
+    "description": "The figure is a photo showing the latest ChewBot. ible components include a Raspberry Pi HQ camera, a soft robotic oral cavity, an upper molar, and a 1g piece of biscuit positioned within the setup. The image highlights the arrangement of these parts used for the chewing experiment. There are no axis titles or plotted data, as this is a photographic depiction rather than a graph or diagram."
+  },
+  {
+    "file_name": "Image-based classification of bolus phases.pdf",
+    "page": 4,
+    "image_path": "figures/Image_based_classification_of_bolus_phas_p4_1.png",
+    "caption": "Fig. 4. Progression of food bolus deformation during robotic chewing under Trajectory 1 and Trajectory 13, from unchewed state to swallowable bolus.",
+    "description": "The figure is a set of photos showing the progression of food bolus deformation during robotic chewing under two different trajectories, labeled Trajectory 1 and Trajectory 13. The images are arranged in pairs for each chewing phase: Unchewed, Initial Chews, Mid Chews, and Final Chews, with photos (a), (c), (e), (g) for Trajectory 1 and (b), (d), (f), (h) for Trajectory 13. The photos visually depict the state of the food bolus at each phase, illustrating how it changes from an unchewed piece to a more broken down, swallowable bolus."
+  },
+  {
+    "file_name": "Image-based classification of bolus phases.pdf",
+    "page": 8,
+    "image_path": "figures/Image_based_classification_of_bolus_phas_p8_1.png",
+    "caption": "Fig. 7. Plots (a) and (b) represents the LDA projection of segmented bolus images across the three chewing phases.",
+    "description": "The figure consists of two scatter plots labeled (a) and (b), showing the LDA projection of segmented bolus images across three chewing phases. Both plots have axes labeled \"LD1\" (x-axis) and \"LD2\" (y-axis). The data points are color-coded and labeled in the legend to represent different chewing phases: \"Final+Swallow,\" \"Initial+Mid\" (or \"Initial+MidChews\" in (b)), and \"Unchewed.\" The background of each plot is divided into colored regions corresponding to these phases. Plot (a) is titled \"Trajectory which has vertical motion (T1)\" and plot (b) is titled \"Trajectory which has vertical + shear motion (T13).\""
+  },
+  {
+    "file_name": "Image-based classification of bolus phases.pdf",
+    "page": 9,
+    "image_path": "figures/Image_based_classification_of_bolus_phas_p9_1.png",
+    "caption": "Fig. 8. Plots (a) and (b) represents the LDA projection of segmented bolus images across the five chewing phases. The distribution conceptually reflects the progression consistent with the Mouth Process Model proposed by Hutchings and Lillford, where oral processing involve gradual structural breakdown and increasing lubrication towards swallowability (Hutchings and Lillford, 1988).",
+    "description": "The figure consists of two scatter plots labeled (a) and (b), showing LDA projections of segmented bolus images across five chewing phases. The x-axis is labeled \"LD1\" and the y-axis \"LD2\" in both plots. Different colored points represent chewing phases: FinalChews, InitialChews, MidChews, and Unchewed, with distinct clusters and decision boundaries visible. The plots illustrate the progression of bolus phases consistent with the Mouth Process Model, with plot (a) showing a trajectory with vertical motion (T1) and plot (b) showing a trajectory with vertical plus shear motion (T13)."
+  },
+  {
+    "file_name": "Optimization_of_Regular_Pick_and_Place_Tasks_Via_Parallel_Manipulators_and_Modelling.pdf",
+    "page": 3,
+    "image_path": "figures/Optimization_of_Regular_Pick_and_Place_T_p3_1.png",
+    "caption": "Fig. 3. GUI",
+    "description": "The figure is a screenshot of a graphical user interface (GUI) titled \"DELTA ROBOT MANIPULATION GUI.\" It shows a photo with a detected screw highlighted, a morphological image of the screw, and input fields for manual operation to insert end-effector positions in X, Y, and Z coordinates. The GUI also displays calculated values such as the length and centroid of the screw in pixels and millimeters, motor angles for three motors, and buttons for moving the robot to specific resting positions or starting the operation."
+  },
+  {
+    "file_name": "Optimization_of_Regular_Pick_and_Place_Tasks_Via_Parallel_Manipulators_and_Modelling.pdf",
+    "page": 4,
+    "image_path": "figures/Optimization_of_Regular_Pick_and_Place_T_p4_1.png",
+    "caption": "Fig. 4. Image processing and kinematics model",
+    "description": "The figure is a diagram illustrating the image processing and kinematics model. It shows a flowchart with blocks representing different processing steps, including image capture from a webcam, object detection, coordinate display, pixel-to-meter conversion, and kinematic modeling. The diagram includes labels such as \"Display x coordinate,\" \"Display y coordinate,\" and \"kinematic_model,\" with numerical values shown in some blocks. There is also a video display window showing an image with objects and detected points."
+  },
+  {
+    "file_name": "Optimization_of_Regular_Pick_and_Place_Tasks_Via_Parallel_Manipulators_and_Modelling.pdf",
+    "page": 5,
+    "image_path": "figures/Optimization_of_Regular_Pick_and_Place_T_p5_1.png",
+    "caption": "",
+    "description": "The figure is a photo showing a parallel manipulator setup used for pick and place tasks. It features a delta robot mounted within a white frame, with a laptop placed on top of the frame displaying some software interface. There are no axis titles, key labels, or trends visible in the image. The caption is noted as \"not found.\""
+  }
+]

@@ -11,10 +11,13 @@ import uuid
 import gspread
 from datetime import datetime
 from zoneinfo import ZoneInfo
+import json
+from llama_index.core import Document
 
 load_dotenv(override=True)
 
 MAX_QUESTIONS = 10   # per visitor, protects your budget
+FIG_MIN_SCORE = 0.5   # only show a figure if its match score is at least this
 STORAGE = "storage"
 
 SYSTEM_PROMPT = """You answer questions about a set of research papers.
@@ -23,7 +26,9 @@ Rules:
 - If the answer is not clearly in the excerpts, say: "I couldn't find that in the papers."
 - Be precise with numbers, dataset names and results, and say which paper they come from.
 - Distinguish between data the study collected/used for its experiments and
-  datasets only mentioned in passing (e.g. used to pre-train a model)."""
+  datasets only mentioned in passing (e.g. used to pre-train a model).
+- Some excerpts describe figures. If a figure is relevant, mention it and its page;
+  the figure image is shown to the user below your answer."""
 
 # ---------- Page setup ----------
 st.set_page_config(page_title="Ask my PhD research", page_icon="📄")
@@ -41,6 +46,31 @@ st.markdown("""
 - **MSc:** Automatic colourisation of greyscale images using deep learning
 - **BSc:** Modelling and Optimisation of Vision-Guided Pick-and-Place Tasks Using Parallel Manipulators
 """)
+
+FIG_JSON = "figures/figures.json"
+
+def load_figure_docs():
+    """Turn each described figure into a searchable document."""
+    if not os.path.exists(FIG_JSON):
+        return []
+    with open(FIG_JSON, encoding="utf-8") as f:
+        figs = json.load(f)
+    docs = []
+    for fig in figs:
+        if not fig.get("description") or not os.path.exists(fig["image_path"]):
+            continue
+        hidden = ["type", "image_path", "caption"]
+        docs.append(Document(
+            text=(f"Figure on page {fig['page']} of {fig['file_name']}. "
+                  f"Caption: {fig['caption'] or 'none'}. "
+                  f"Description: {fig['description']}"),
+            metadata={"file_name": fig["file_name"], "page_label": str(fig["page"]),
+                      "type": "figure", "image_path": fig["image_path"],
+                      "caption": fig["caption"]},
+            excluded_embed_metadata_keys=hidden,
+            excluded_llm_metadata_keys=hidden,
+        ))
+    return docs
 
 # ---------- Load models and index (only once, then cached) ----------
 @st.cache_resource(show_spinner="Loading papers...")
@@ -60,6 +90,7 @@ def get_index():
     if os.path.exists(STORAGE):
         return load_index_from_storage(StorageContext.from_defaults(persist_dir=STORAGE))
     docs = SimpleDirectoryReader("Data", file_extractor={".pdf": PDFReader()}).load_data()
+    docs += load_figure_docs()
     index = VectorStoreIndex.from_documents(docs)
     index.storage_context.persist(persist_dir=STORAGE)
     return index
@@ -109,6 +140,8 @@ with st.sidebar:
 for m in st.session_state.messages:
     with st.chat_message(m["role"]):
         st.markdown(m["content"])
+        for fig in m.get("figures", []):
+            st.image(fig["path"], caption=fig["caption"])
 
 # ---------- Handle a new question ----------
 if question := st.chat_input("Ask about my research..."):
@@ -134,8 +167,22 @@ if question := st.chat_input("Ask about my research..."):
 
             answer = str(response)
             st.markdown(answer)
+
+            # Show up to 2 relevant figures
+            figures = []
+            for node in response.source_nodes:
+                m = node.metadata
+                if (m.get("type") == "figure" and (node.score or 0) >= FIG_MIN_SCORE
+                        and m["image_path"] not in [f["path"] for f in figures]):
+                    figures.append({"path": m["image_path"],
+                                    "caption": f"{m.get('caption') or 'Figure'} "
+                                               f"({m['file_name']}, page {m['page_label']})"})
+            figures = figures[:2]
+            for fig in figures:
+                st.image(fig["path"], caption=fig["caption"])
+
             with st.expander("Sources"):
                 st.markdown("\n".join(sources))
 
-        st.session_state.messages.append({"role": "assistant", "content": answer})
+        st.session_state.messages.append({"role": "assistant", "content": answer, "figures": figures})
         log_question(question, answer, sources)
