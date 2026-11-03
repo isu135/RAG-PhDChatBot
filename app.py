@@ -13,6 +13,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 import json
 from llama_index.core import Document
+from llama_index.core.vector_stores import MetadataFilters, ExactMatchFilter
 
 load_dotenv(override=True)
 
@@ -27,11 +28,11 @@ Rules:
 - Be precise with numbers, dataset names and results, and say which paper they come from.
 - Distinguish between data the study collected/used for its experiments and
   datasets only mentioned in passing (e.g. used to pre-train a model).
-- Some excerpts describe figures. If a figure is relevant, mention it and its page;
-  the figure image is shown to the user below your answer."""
+- Some excerpts describe figures. The relevant figure images are shown automatically
+  below your answer, so never offer to show them; just mention the figure and its page."""
 
 # ---------- Page setup ----------
-st.set_page_config(page_title="Ask my PhD research", page_icon="📄")
+st.set_page_config(page_title="Ask about my PhD research", page_icon="📄")
 st.title("📄 Ask about my research")
 st.caption("Ask questions about my published papers across my BSc, MSc and PhD. "
            "Answers come only from these papers, with page citations. "
@@ -59,14 +60,14 @@ def load_figure_docs():
     for fig in figs:
         if not fig.get("description") or not os.path.exists(fig["image_path"]):
             continue
-        hidden = ["type", "image_path", "caption"]
+        hidden = ["type", "image_path", "caption", "boost"]
         docs.append(Document(
             text=(f"Figure on page {fig['page']} of {fig['file_name']}. "
                   f"Caption: {fig['caption'] or 'none'}. "
                   f"Description: {fig['description']}"),
             metadata={"file_name": fig["file_name"], "page_label": str(fig["page"]),
                       "type": "figure", "image_path": fig["image_path"],
-                      "caption": fig["caption"]},
+                      "caption": fig["caption"], "boost": float(fig.get("boost", 0))},
             excluded_embed_metadata_keys=hidden,
             excluded_llm_metadata_keys=hidden,
         ))
@@ -96,6 +97,12 @@ def get_index():
     return index
 
 index = get_index()
+
+# A separate search over figures only
+fig_retriever = index.as_retriever(
+    similarity_top_k=6,
+    filters=MetadataFilters(filters=[ExactMatchFilter(key="type", value="figure")]),
+)
 
 # ---------- Question log (Google Sheet) ----------
 @st.cache_resource
@@ -168,16 +175,19 @@ if question := st.chat_input("Ask about my research..."):
             answer = str(response)
             st.markdown(answer)
 
-            # Show up to 2 relevant figures
+            # Show up to 3 relevant figures, preferring boosted ones
+            candidates = [n for n in fig_retriever.retrieve(question)
+                          if (n.score or 0) >= FIG_MIN_SCORE]
+            candidates.sort(key=lambda n: (n.score or 0) + n.metadata.get("boost", 0),
+                            reverse=True)
             figures = []
-            for node in response.source_nodes:
+            for node in candidates:
                 m = node.metadata
-                if (m.get("type") == "figure" and (node.score or 0) >= FIG_MIN_SCORE
-                        and m["image_path"] not in [f["path"] for f in figures]):
+                if m["image_path"] not in [f["path"] for f in figures]:
                     figures.append({"path": m["image_path"],
                                     "caption": f"{m.get('caption') or 'Figure'} "
                                                f"({m['file_name']}, page {m['page_label']})"})
-            figures = figures[:2]
+            figures = figures[:3]
             for fig in figures:
                 st.image(fig["path"], caption=fig["caption"])
 

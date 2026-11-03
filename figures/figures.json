@@ -3,7 +3,7 @@
     "file_name": "A_Novel_Approach_to_Evaluate_Robotic_in_Vitro_Chewing_Effect_on_Food_Bolus_Formation_Using_the_GLCM_Image_Analysis_Technique.pdf",
     "page": 3,
     "image_path": "figures/A_Novel_Approach_to_Evaluate_Robotic_in__p3_1.png",
-    "caption": "FIGURE 1. (a) Chewing robot. (b) Beef and plant based patties before chewing. (c) Trajectory 13 marked in blue dash line. (d) Food patty placed inside the artiﬁcial cavity.",
+    "caption": "FIGURE 1. (a) Older version of the bot. (b) Beef and plant based patties before chewing. (c) Trajectory 13 marked in blue dash line. (d) Food patty placed inside the artiﬁcial cavity.",
     "description": "The figure is a set of four photos labeled (a) through (d). Photo (a) shows an older version of ChewBot prior to vision system integration, with labeled parts \"Upper molar\" and \"Oral cavity.\" Photo (b) displays beef and plant-based patties before chewing, with labels identifying \"Beef patties\" and \"plant patties.\" Photo (c) depicts the chewing robot's upper and lower molars with a blue dashed line marking \"Trajectory 13.\" Photo (d) shows a food patty placed inside an artificial cavity. There are no axis titles or plots, and no trends are visible as it is a photographic figure."
   },
   {
@@ -73,7 +73,7 @@
     "file_name": "ChewNet A multimodal dataset.pdf",
     "page": 3,
     "image_path": "figures/ChewNet_A_multimodal_dataset_p3_1.png",
-    "caption": "Fig. 1. ChewBot: the chewing robot.",
+    "caption": "Fig. 1. Older version of the bot.",
     "description": "The figure is a photo showing the older version of the \"ChewBot: the chewing robot.\" The image depicts the robot's structure, including various mechanical components such as gears, a wheel, wires, and a syringe-like part. There are no axis titles, key labels, or plotted data visible in the figure. The caption identifies the device but does not provide additional details or trends."
   },
   {
@@ -129,8 +129,9 @@
     "file_name": "Image-based classification of bolus phases.pdf",
     "page": 3,
     "image_path": "figures/Image_based_classification_of_bolus_phas_p3_1.png",
-    "caption": "Fig. 1. In-vitro chewing setup. The latest ChewBot.",
-    "description": "The figure is a photo showing the latest ChewBot. ible components include a Raspberry Pi HQ camera, a soft robotic oral cavity, an upper molar, and a 1g piece of biscuit positioned within the setup. The image highlights the arrangement of these parts used for the chewing experiment. There are no axis titles or plotted data, as this is a photographic depiction rather than a graph or diagram."
+    "caption": "ChewBot the latest version.",
+    "boost": 0.1,
+    "description": "The figure is a photo showing the latest ChewBot. Visible components include a Raspberry Pi HQ camera, a soft robotic oral cavity, an upper molar, and a 1g piece of biscuit positioned within the setup. The image highlights the arrangement of these parts used for the chewing experiment. There are no axis titles or plotted data, as this is a photographic depiction rather than a graph or diagram."
   },
   {
     "file_name": "Image-based classification of bolus phases.pdf",
