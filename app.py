@@ -39,13 +39,13 @@ st.caption("Ask questions about my published papers across my BSc, MSc and PhD. 
            "PhD papers currently under review are not yet included.")
 st.subheader("Papers included")
 st.markdown("""
-- **PhD:** Image-based classification of robotic mastication (J. Food Engineering)
-- **PhD:** ChewNet multimodal food-bolus dataset (Data in Brief)
-- **PhD:** A novel approach for robotic bolus formation using GLCM image analysis
-- **PhD:** Moisture estimation of boluses by image processing
-- **PhD:** Real-time deep learning framework for chewing-cycle estimation 
-- **MSc:** Automatic colourisation of greyscale images using deep learning
-- **BSc:** Modelling and Optimisation of Vision-Guided Pick-and-Place Tasks Using Parallel Manipulators
+- **PhD · ChewBot:** Image-based Classification of Bolus Phases in Robotic Mastication using Hybrid Machine Learning Analysis
+- **PhD · ChewBot:** ChewNet: A Multimodal Dataset for Invivo and Invitro Beef and Plant-Based Burger Patty Boluses with Images, Texture, and Force Profiles 
+- **PhD · ChewBot:** A Novel Approach to Evaluate Robotic in Vitro Chewing Effect on Food Bolus Formation Using the GLCM Image Analysis Technique 
+- **PhD · ChewBot:** Estimation of the Moisture Content of In Vitro Chewed Food Boluses by Image Processing 
+- **PhD · ChewBot:** A Conceptual Framework for a Real-Time Deep Learning Model to Estimate In vitro Chewing for Safe Swallowing 
+- **MSc:** Automatic Colorization of Greyscale Images Using Deep Learning Fusion Technique and Accuracy Level Analysis 
+- **BSc · Delta robot:** Optimization of Regular Pick and Place Tasks Via Parallel Manipulators and Modelling
 """)
 
 FIG_JSON = "figures/figures.json"
